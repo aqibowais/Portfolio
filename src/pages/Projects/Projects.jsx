@@ -5,46 +5,47 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "Snapmate (All-in-One Video Downloader & Status Saver)",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
-    color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+      "A powerful media downloader supporting reels, shorts, and WhatsApp statuses. Overcame Android storage limitations using SAF and optimized parsing logic for seamless performance.",
+    src: "snapmate.jpg",
+    link: "https://i.postimg.cc/SK3vmCKM/image.png",
+    color: "#3498db",
+     // Optional if public
+      liveLink: "https://play.google.com/store/apps/details?id=com.aqib.snapmate",
+      },
+      {
+      title: "Einbürgerungstest 2025 (German Citizenship Quiz App)",
+      description:
+        "A fully offline citizenship exam prep app with 300+ official questions, 12+ languages, and mock tests. Achieved 250+ organic downloads in the first week.",
+      src: "quizapp.jpg",
+      link: "https://i.postimg.cc/66b2Ymmp/Featured-Image-1.jpg",
+      color: "#DD1C1A", // German flag red color
+      githubLink: "", // Add if applicable
+    liveLink: "https://play.google.com/store/apps/details?id=com.aqib.quizapp",
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "Sirat (Islamic Spiritual Companion App)",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
-    color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+      "All-in-one Islamic lifestyle app with Quran access, daily progress tracking, Duas, multilingual support, and personalized notifications for spiritual growth.",
+    src: "sirat.jpg",
+    link: "https://i.postimg.cc/BQFyMdnT/R1-Wzt-Crro-FQP-821-450.png",
+    color: "#27ae60",
+    githubLink: "", // Add if applicable
+    liveLink: "https://play.google.com/store/apps/details?id=com.aqib.siratapp",
   },
   {
-    title: "🚀 CodeWhisperer",
+    title: "CTRade Logistics App (Enterprise App)",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
-    color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
-  },
-  {
-    title: "CodeKori 🔥",
-    description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
-    color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
-  },
+      "Custom enterprise-grade app for CTrade Houston to manage dispatching, user roles, and logistics. Internal deployment with modular architecture.",
+    src: "ctrade.jpg",
+    link: "https://i.postimg.cc/KYK44Dt7/Mobile-App-Screen-Mockup-Mosaic.png",
+    color: "#e67e22",
+    githubLink: "", // Private Repo
+    liveLink: "", // Internal App
+  }
 ];
+
 
 export default function Projects() {
   const container = useRef(null);
@@ -164,7 +165,7 @@ function Card({
 
               <div className="flex items-center gap-4">
                 {/* GitHub Link */}
-                <motion.a
+                {/* <motion.a
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -191,10 +192,10 @@ function Card({
                   >
                     Code
                   </span>
-                </motion.a>
+                </motion.a> */}
 
                 {/* Live Link */}
-                <motion.a
+                {liveLink!=""?<motion.a
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -223,7 +224,7 @@ function Card({
                   >
                     Live
                   </span>
-                </motion.a>
+                </motion.a>:null}
               </div>
             </div>
           </div>

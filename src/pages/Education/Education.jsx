@@ -13,28 +13,38 @@ import { motion } from "framer-motion";
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const educationData = [
-    {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
-      description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
-    },
-  ];
+const educationData = [
+  {
+    degree: "Bachelor of Engineering in Computer Engineering",
+    school: "Sir Syed University of Engineering and Technology",
+    mascot: "🎓",
+    year: "2022 - 2026",
+    achievements: ["CGPA: 3.86 / 4.00", "Currently Pursuing"],
+    skills: ["Data Structures", "Flutter", "AI & NLP", "Computer Vision", "IoT Systems"],
+    description:
+      "Focused on mobile and web development, AI integration, and modern computing systems. Actively exploring emerging tech like Agentic AI and NLP while maintaining strong academic performance.",
+  },
+  {
+    degree: "Intermediate in Pre-Engineering",
+    school: "Government National College, Karachi",
+    mascot: "📗",
+    year: "2020 - 2022",
+    achievements: ["Grade: A", "Major Subjects: Math, Physics, Chemistry"],
+    skills: ["Mathematics", "Physics", "Analytical Thinking", "Problem Solving"],
+    description:
+      "Developed a strong foundation in core engineering subjects, preparing for university-level technical education and logical reasoning.",
+  },
+  // {
+  //   degree: "Secondary School Certificate (SSC)",
+  //   school: "Private Candidate",
+  //   mascot: "📘",
+  //   year: "2018 - 2020",
+  //   achievements: ["Board of Secondary Education Karachi", "Science Group"],
+  //   skills: ["General Science", "English", "Computer Studies", "Biology"],
+  //   description:
+  //     "Completed foundational secondary education with a focus on science subjects, setting the stage for future academic and technical pursuits.",
+  // },
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },

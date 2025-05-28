@@ -15,18 +15,22 @@ import {
 } from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiTypescript,
+  SiFlutter,
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
   SiGraphql,
-  SiJest,
-  SiWebpack,
-  SiRedux,
+  SiAndroidstudio,
+  SiOpenai,
   SiFirebase,
   SiVercel,
   SiVite,
+  SiGithubactions,
+  SiPostman
 } from "react-icons/si";
+import { MdLanguage } from "react-icons/md";
+import { BsCameraVideo } from "react-icons/bs";
+import { GiCircuitry } from "react-icons/gi";
 import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
@@ -71,15 +75,16 @@ const SkillsSection = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
+        {
+          name: "Flutter",
+          icon: <SiFlutter className="w-4 h-4 text-[#02569B]" />,
+        },
         { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
         {
           name: "Next.js",
           icon: <SiNextdotjs className="w-4 h-4 text-white" />,
         },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
+       
         {
           name: "Tailwind CSS",
           icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
@@ -150,16 +155,13 @@ const SkillsSection = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
+        { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
         {
           name: "Docker",
           icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
         },
-        { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
-        {
-          name: "Kubernetes",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
-        },
+        { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
+        { name: "GitHub Actions", icon: <SiGithubactions className="w-4 h-4 text-[#2088FF]" /> },
         { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
@@ -173,43 +175,57 @@ const SkillsSection = () => {
           name: "VS Code",
           icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
         },
-        { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
         {
-          name: "Webpack",
-          icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
-        },
-        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
-        {
+          name: "Android Studio",
+          icon: <SiAndroidstudio className="w-4 h-4 text-[#3DDC84]" />,
+        }, {
           name: "Firebase",
           icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
         },
-        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
-        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
+        {
+          name: "Flutter DevTools",
+          icon: <SiFlutter className="w-4 h-4 text-[#02569B]" />,
+        },
+       
+        {
+          name: "Vercel",
+          icon: <SiVercel className="w-4 h-4 text-white" />,
+        },
+        {
+          name: "Postman",
+          icon: <SiPostman className="w-4 h-4 text-[#FF6C37]" />,
+        },
+        {
+          name: "Vite",
+          icon: <SiVite className="w-4 h-4 text-[#646CFF]" />,
+        },
       ],
-    },
+    }
+    ,
     {
       icon: Paintbrush,
-      title: "Creative Skills",
+      title: "Interests & Exploration",
       color: "text-yellow-400",
       skills: [
         {
-          name: "UI Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF4081]" />,
+          name: "Artificial Intelligence",
+          icon: <SiOpenai className="w-4 h-4 text-[#412991]" />,
         },
         {
-          name: "SVG Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#00C853]" />,
+          name: "NLP & LLMs",
+          icon: <MdLanguage className="w-4 h-4 text-[#00BFA5]" />,
         },
         {
-          name: "3D Modeling",
-          icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
+          name: "Computer Vision",
+          icon: <BsCameraVideo className="w-4 h-4 text-[#FF5722]" />,
         },
         {
-          name: "Motion Graphics",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF6D00]" />,
+          name: "Hardware Prototyping",
+          icon: <GiCircuitry className="w-4 h-4 text-[#7C4DFF]" />,
         },
       ],
-    },
+    }
+    
   ];
 
   return (

@@ -6,6 +6,8 @@ import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
+import { motion } from "framer-motion";
+
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
@@ -42,25 +44,28 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Full-Stack Developer",
+    "Flutter & MERN Stack Developer",
+    "Learning Agentic Systems, AI & NLP",
+    "Fast-Paced Learner & Problem Solver",
   ];
 
   const [code] = useState(`
 const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
-    skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+    name: 'Aqib Owais',
+    title: 'Full-Stack Developer | Agentic AI Enthusiast | Problem Solver',
+   skills: [
+      'Flutter', 'Dart', 'Node.js', 'Express', 'React', 'MongoDB',
+      'C++', 'Python', 'OpenCV', 'Raspberry Pi',
+      'Pandas', 'NumPy', 'Matplotlib',
+      'Git', 'Linux', 'AI', 'NLP', 'Agentic Systems',
+      'DSA', 'OOP', 'DBMS', 'Operating Systems',
+      
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 4, 
+    yearsOfExperience: 3, 
     hireable: function() {
         return (
             this.hardWorker &&
@@ -138,7 +143,7 @@ const profile = {
                     I'm
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      Aqib Owais
                     </span>
                   </span>
                 </h1>
@@ -159,8 +164,8 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
-                  and coding the future 💻✨
+                Full-Stack Developer 💻 | Exploring Agentic AI & Beyond 🚀✨ 
+                | Forever Curious 🔍
                 </p>
               </div>
 
@@ -168,12 +173,39 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/seraprogrammer"
+                  href="https://github.com/aqibowais"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      <span>Learn More</span>
+                       <motion.a
+                  // href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2"
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    // stroke={color}
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span
+                    className="text-xs md:text-sm font-medium"
+                  >
+                    Github
+                  </span>
+                </motion.a>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
@@ -186,7 +218,14 @@ const profile = {
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                      <span>Get Resume</span>
+                      <motion.a 
+                        rel="noopener noreferrer"
+                        href="https://drive.google.com/file/d/1ZMxFoPnIityBSIwbF8Fn6SQ6DcZFDMBb/view?usp=drive_link"
+                        whileHover={{y:-3}}
+                        transition={{ type: "spring", stiffness: 400 }}
+                      >
+                        <span>Get Resume</span>
+                      </motion.a>
                       <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>
@@ -213,7 +252,7 @@ const profile = {
             </div>
 
             {/* Right column - Code window */}
-            <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
+            <div className="w-full lg:w-1/2 lg:mt-20 animate__animated animate__fadeInDown animate__delay-0.1s">
               <div className="gradient-border">
                 <div className="code-window bg-[#091121]">
                   <div className="window-header">

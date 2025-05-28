@@ -1,7 +1,7 @@
 import IconCloud from "./ui/icon-cloud";
 
 const slugs = [
-  "typescript",
+  "python",
   "javascript",
   "dart",
   "java",
@@ -13,15 +13,11 @@ const slugs = [
   "nodedotjs",
   "express",
   "nextdotjs",
-  "prisma",
   "amazonaws",
   "postgresql",
   "firebase",
-  "nginx",
   "vercel",
   "testinglibrary",
-  "jest",
-  "cypress",
   "docker",
   "git",
   "jira",
@@ -29,8 +25,19 @@ const slugs = [
   "gitlab",
   "visualstudiocode",
   "androidstudio",
-  "sonarqube",
   "figma",
+  "cplusplus",
+  "arduino",
+  "SQL",
+  "mongodb",
+  "graphql",
+  "tailwindcss",
+  "supabase",
+  "opencv",
+  "matplotlib",
+  "pandas",
+  "numpy",
+
 ];
 
 function IconCloudDemo() {
