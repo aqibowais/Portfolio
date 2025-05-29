@@ -2,44 +2,43 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import PropTypes from "prop-types";
+import Snapmate from "../../assets/images/snapmate_mockup.png";
+import Lid from "../../assets/images/lid_mockup.jpg";
+import Sirat from "../../assets/images/sirat_mockup.png";
+import Ctrade from "../../assets/images/ctrade_mockup.png";
 
 const projects = [
   {
     title: "Snapmate (All-in-One Video Downloader & Status Saver)",
     description:
       "A powerful media downloader supporting reels, shorts, and WhatsApp statuses. Overcame Android storage limitations using SAF and optimized parsing logic for seamless performance.",
-    src: "snapmate.jpg",
-    link: "https://i.postimg.cc/SK3vmCKM/image.png",
+    link : Snapmate,
     color: "#3498db",
-     // Optional if public
-      liveLink: "https://play.google.com/store/apps/details?id=com.aqib.snapmate",
+      liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.snapmate",
       },
       {
       title: "Einbürgerungstest 2025 (German Citizenship Quiz App)",
       description:
         "A fully offline citizenship exam prep app with 300+ official questions, 12+ languages, and mock tests. Achieved 250+ organic downloads in the first week.",
-      src: "quizapp.jpg",
-      link: "https://i.postimg.cc/66b2Ymmp/Featured-Image-1.jpg",
+      link: Lid,
       color: "#DD1C1A", // German flag red color
-      githubLink: "", // Add if applicable
-    liveLink: "https://play.google.com/store/apps/details?id=com.aqib.quizapp",
+      githubLink: "", 
+    liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.einbuergerung.test",
   },
   {
     title: "Sirat (Islamic Spiritual Companion App)",
     description:
       "All-in-one Islamic lifestyle app with Quran access, daily progress tracking, Duas, multilingual support, and personalized notifications for spiritual growth.",
-    src: "sirat.jpg",
-    link: "https://i.postimg.cc/BQFyMdnT/R1-Wzt-Crro-FQP-821-450.png",
+    link: Sirat,
     color: "#27ae60",
-    githubLink: "", // Add if applicable
-    liveLink: "https://play.google.com/store/apps/details?id=com.aqib.siratapp",
+    githubLink: "", 
+    liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.sirat",
   },
   {
     title: "CTRade Logistics App (Enterprise App)",
     description:
       "Custom enterprise-grade app for CTrade Houston to manage dispatching, user roles, and logistics. Internal deployment with modular architecture.",
-    src: "ctrade.jpg",
-    link: "https://i.postimg.cc/KYK44Dt7/Mobile-App-Screen-Mockup-Mosaic.png",
+    link: Ctrade,
     color: "#e67e22",
     githubLink: "", // Private Repo
     liveLink: "", // Internal App
