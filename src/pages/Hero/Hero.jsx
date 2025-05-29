@@ -281,6 +281,10 @@ const profile = {
           </span>
           <i className="fas fa-chevron-down text-blue-400 text-xl"></i>
         </div>
+        {/* {/* Scroll indicator */}
+
+
+
         <PortfolioPage />
       </main>
     </>
