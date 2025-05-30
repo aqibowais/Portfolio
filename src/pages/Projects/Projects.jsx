@@ -239,7 +239,7 @@ function Card({
      {/* Show arrow only if NOT the last card */}
       {i !== totalProjects - 1 && (
         <motion.div
-          className="w-full flex justify-center mt-10 mb-20"
+          className="w-full flex justify-center mb-20"
           initial={{ y: 0, opacity: 0.6 }}
           animate={{ y: [0, 10, 0], opacity: [0.6, 1, 0.6] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
