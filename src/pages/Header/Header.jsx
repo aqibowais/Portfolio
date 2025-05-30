@@ -43,6 +43,7 @@ export default function Header() {
     },
     { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
+    {id:"resume", icon: FaUser, text: "Resume", path: "https://drive.google.com/file/d/1ZMxFoPnIityBSIwbF8Fn6SQ6DcZFDMBb/view?usp=drive_link" }
   ];
 
   return (
