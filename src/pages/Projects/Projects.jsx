@@ -12,18 +12,20 @@ const projects = [
     title: "Snapmate (All-in-One Video Downloader & Status Saver)",
     description:
       "A powerful media downloader supporting reels, shorts, and WhatsApp statuses. Overcame Android storage limitations using SAF and optimized parsing logic for seamless performance.",
-    link : Snapmate,
+    link: Snapmate,
     color: "#3498db",
-      liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.snapmate",
-      },
-      {
-      title: "Einbürgerungstest 2025 (German Citizenship Quiz App)",
-      description:
-        "A fully offline citizenship exam prep app with 300+ official questions, 12+ languages, and mock tests. Achieved 250+ organic downloads in the first week.",
-      link: Lid,
-      color: "#DD1C1A", // German flag red color
-      githubLink: "", 
-    liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.einbuergerung.test",
+    liveLink:
+      "https://play.google.com/store/apps/details?id=com.tekhof.snapmate",
+  },
+  {
+    title: "Einbürgerungstest 2025 (German Citizenship Quiz App)",
+    description:
+      "A fully offline citizenship exam prep app with 300+ official questions, 12+ languages, and mock tests. Achieved 250+ organic downloads in the first week.",
+    link: Lid,
+    color: "#DD1C1A", // German flag red color
+    githubLink: "",
+    liveLink:
+      "https://play.google.com/store/apps/details?id=com.tekhof.einbuergerung.test",
   },
   {
     title: "Sirat (Islamic Spiritual Companion App)",
@@ -31,7 +33,7 @@ const projects = [
       "All-in-one Islamic lifestyle app with Quran access, daily progress tracking, Duas, multilingual support, and personalized notifications for spiritual growth.",
     link: Sirat,
     color: "#27ae60",
-    githubLink: "", 
+    githubLink: "",
     liveLink: "https://play.google.com/store/apps/details?id=com.tekhof.sirat",
   },
   {
@@ -42,9 +44,8 @@ const projects = [
     color: "#e67e22",
     githubLink: "", // Private Repo
     liveLink: "", // Internal App
-  }
+  },
 ];
-
 
 export default function Projects() {
   const container = useRef(null);
@@ -58,23 +59,26 @@ export default function Projects() {
       <main className="bg-black" ref={container}>
         <section className="text-white w-full bg-slate-950">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
-            return (
-              <Card
-                key={`p_${i}`}
-                i={i}
-                url={project.link}
-                title={project.title}
-                color={project.color}
-                description={project.description}
-                progress={scrollYProgress}
-                range={[i * 0.25, 1]}
-                targetScale={targetScale}
-                githubLink={project.githubLink}
-                liveLink={project.liveLink}
-              />
-            );
-          })}
+  const targetScale = 1 - (projects.length - i) * 0.05;
+
+  return (
+    <Card
+      key={i}
+      i={i}
+      title={project.title}
+      description={project.description}
+      url={project.link}
+      color={project.color}
+      progress={scrollYProgress}
+      range={[i * 0.25, 1]}
+      targetScale={targetScale}
+      githubLink={project.githubLink}
+      liveLink={project.liveLink}
+      totalProjects={projects.length} // 👈 add this
+    />
+  );
+})}
+
         </section>
       </main>
     </ReactLenis>
@@ -92,6 +96,7 @@ function Card({
   targetScale,
   githubLink,
   liveLink,
+  totalProjects,
 }) {
   const container = useRef(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -99,7 +104,7 @@ function Card({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center flex-col justify-center sticky top-20"
     >
       <motion.div
         style={{
@@ -194,41 +199,67 @@ function Card({
                 </motion.a> */}
 
                 {/* Live Link */}
-                {liveLink!=""?<motion.a
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                {liveLink != "" ? (
+                  <motion.a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2"
+                    whileHover={{ y: -3 }}
+                    transition={{ type: "spring", stiffness: 400 }}
                   >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
-                  >
-                    Live
-                  </span>
-                </motion.a>:null}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={color}
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span
+                      className="text-xs md:text-sm font-medium"
+                      style={{ color }}
+                    >
+                      Live
+                    </span>
+                  </motion.a>
+                ) : null}
               </div>
             </div>
           </div>
         </div>
       </motion.div>
+     {/* Show arrow only if NOT the last card */}
+      {i !== totalProjects - 1 && (
+        <motion.div
+          className="w-full flex justify-center mt-10 mb-20"
+          initial={{ y: 0, opacity: 0.6 }}
+          animate={{ y: [0, 10, 0], opacity: [0.6, 1, 0.6] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="opacity-70 hover:opacity-100 transition"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </motion.div>
+      )}
     </div>
   );
 }
